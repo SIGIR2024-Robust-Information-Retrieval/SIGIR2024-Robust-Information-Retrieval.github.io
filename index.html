@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The SIGIR 2024 Tutorial: Robust Information Retrieval</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+              <span style="font-size: 80%">The SIGIR 2024 Tutorial:</span><br />
+              Robust Information Retrieval
+            </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <table>
+                <tr>
+                  <!-- <th scope="row">TR-7</th> -->
+                  <td width="16%" style="text-align: center; padding: 10px"><img width="150px" height="150px" src="static/imgs/profile_liuyuan.jpg"></td>
+                  <td width="16%" style="text-align: center; padding: 10px"><img width="150px" height="150px" src="static/imgs/profile_ruqing.jpg"></td>
+                  <td width="16%" style="text-align: center; padding: 10px"><img width="150px" height="150px" src="static/imgs/profile_jiafeng.jpg"></td>
+                  <td width="16%" style="text-align: center; padding: 10px"><img width="150px" height="150px" src="static/imgs/profile_mdr.jpg"></td>
+              </tr>
+                <tr>
+                  <!-- <th scope="row">TR-7</th> -->
+                  <td width="16%" style="text-align: center"><a href="https://davion-liu.github.io/" style="border-radius: 50%">Yu-An Liu</a><sup>1</sup>,</td>
+                  <td width="16%" style="text-align: center"><a href="https://daqingchong.github.io/" style="border-radius: 50%">Ruqing Zhang</a><sup>1</sup>,</td>
+                  <td width="16%" style="text-align: center"><a href="http://www.bigdatalab.ac.cn/gjf/" style="border-radius: 50%">Jiafeng Guo</a><sup>1</sup>,</td>
+                  <td width="16%" style="text-align: center"><a href="https://staff.fnwi.uva.nl/m.derijke/" style="border-radius: 50%">Maarten de Rijke</a><sup>2</sup></td>
+                </tr>
+            </table>
+            </span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>CAS Key Lab of Network Data Science and Technology, ICT, CAS, University of Chinese Academy of Sciences, </span>
+            <span class="author-block"><sup>2</sup>University of Amsterdam</span>
+          </div>
+          <br />
+          <div class="is-size-5 publication-authors">
+            <b>Sunday July 14th 1:30 PM - 5:00 PM (EDT) @ South American A </b>
+          </div>
+          <!-- <div class="is-size-5 publication-authors">
+            Zoom link available on <a href="https://underline.io/events/395/sessions?eventSessionId=15330&searchGroup=lecture" target="_blank">Underline</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">About this tutorial</h2>
+        <div class="content has-text-justified">
+          <p>
+            Beyond effectiveness, the robustness of an information retrieval (IR) system is increasingly attracting attention. 
+            When deployed, a critical technology such as IR should not only deliver strong performance on average but also have the ability to handle a variety of exceptional situations. 
+            In recent years, research into the robustness of IR has seen significant growth, with numerous researchers offering extensive analyses and proposing myriad strategies to address robustness challenges.
+          </p>
+          <p>
+            In this tutorial, we first provide background information covering the basics and a taxonomy of robustness in IR. 
+            Then, we examine adversarial robustness and out-of-distribution (OOD) robustness within IR-specific contexts, extensively reviewing recent progress in methods to enhance robustness. 
+            The tutorial concludes with a discussion on the robustness of IR in the context of large language models (LLMs), highlighting ongoing challenges and promising directions for future research. 
+            This tutorial aims to generate broader attention to robustness issues in IR, facilitate an understanding of the relevant literature, and lower the barrier to entry for interested researchers and practitioners.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+
+  
+
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Slides</h2>
+        Section 1: <a href="https://robust-information-retrieval.github.io/" target='_blank'>Introduction</a>
+        <br />
+        Section 2: <a href="https://robust-information-retrieval.github.io/" target='_blank'>Preliminaries</a>
+        <br />
+        Section 3: <a href="https://robust-information-retrieval.github.io/" target='_blank'>Adversarial robustness</a>
+        <br />
+        Section 4: <a href="https://robust-information-retrieval.github.io/" target='_blank'>Out-of-distribution robustness</a>
+        <br />
+        Section 5: <a href="https://robust-information-retrieval.github.io/" target='_blank'>Robust IR in the age of LLMs</a>
+        <br />
+        Section 6: <a href="https://robust-information-retrieval.github.io/" target='_blank'>Challenges and future directions</a>
+
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Schedule</h2>
+        
+
+        <div class="content has-text-justified">
+
+          <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          </style>
+          <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-0pky">Time</th>
+              <th class="tg-0lax">Section</th>
+              <th class="tg-0lax">Presenter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">13:30 - 13:50</td>
+              <td class="tg-0lax">Section 1: Introduction</td>
+              <td class="tg-0lax">Maarten de Rijke</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">13:50 - 14:10</td>
+              <td class="tg-0lax">Section 2: Preliminaries</td>
+              <td class="tg-0lax">Yu-An Liu</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">14:10 - 15:00</td>
+              <td class="tg-0lax">Section 3: Adversarial robustness</td>
+              <td class="tg-0lax">Yu-An Liu</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">15:00 — 15:30</td>
+              <td class="tg-0lax">30min coffee break</td>
+              <td class="tg-0lax"></td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">15:30 - 16:10</td>
+              <td class="tg-0lax">Section 4: Out-of-distribution robustness</td>
+              <td class="tg-0lax">Yu-An Liu</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">16:10 - 16:30</td>
+              <td class="tg-0lax">Section 5: Robust IR in the age of LLMs</td>
+              <td class="tg-0lax">Yu-An Liu</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">16:30 - 16:50</td>
+              <td class="tg-0lax">Section 6: Challenges and future directions</td>
+              <td class="tg-0lax">Maarten de Rijke</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">16:50 - 17:00</td>
+              <td class="tg-0lax">Q & A</td>
+              <td class="tg-0lax">All</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+   
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reading List</h2>
+
+        <p>The tutorial extensively covers papers highlighted in <b>bold</b>.</p>
+      
+        <h3 class="title is-5">Section 3: Adversarial robustness</h3>
+        <h4 class="title is-5">3.1 Adversarial attacks</h4>
+
+        <h5 class="title is-5">3.1.1 Steal knowledge from black-box models</h5>
+
+        <br /> 
+        <p><b>Surrogate model training</b></pp>
+        <ul>
+        </ul>
+
+        <h5 class="title is-5">3.1.2 Identify vulnerable positions in documents</h5>
+        
+        <br />
+        <p><b>Pre-defined position</b></pp>
+
+          <ul>
+         </ul>
+         <br />
+         <p><b>Output-guided position</b></pp>
+          <ul>
+          </ul>
+          <br />
+          <p><b>Gradient-guided position</b></pp>
+            <ul>
+            </ul>
+
+        <br />
+        <h5 class="title is-5">3.1.3 Add Perturbation to identified positions</h5>
+        <h6 class="title is-5">3.1.3.1 Perturbation type</h6>
+        <p><b> Word substitution</b></pp>
+          <ul>
+          </ul>
+          <br />
+          <p><b> Trigger sentence</b></pp>
+            <ul>
+             </ul>
+          <br />
+          <p><b> Multi-granular</b></pp>
+          <ul>
+            </ul>
+            <br />
+          <p><b> Encoding error</b></pp>
+            <ul>
+            </ul>
+        <br />
+          <p><b> Grammatical error</b></pp>
+            <ul>
+            </ul>
+        <br />
+        <h6 class="title is-5">3.1.3.2 Perturb strategy</h6>
+                <p><b> Static: greedy</b></pp>
+          <ul>
+          </ul>
+          <br />
+          <p><b> Dynamic: RL</b></pp>
+            <ul>
+             </ul>
+          <br />
+
+      </div>
+    </div>
+
+
+
+    <br />
+    <!--Code -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Available code</h2>
+        <ul>
+
+
+        </ul>
+
+        <br />
+      
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Survey</h2>
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2404.14851">From Matching to Generation: A Survey on Generative Information Retrieval</a> (Li et al., 2024) </li>
+        </ul>
+        <br />
+      
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Analysis</h2>
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2404.00684">Generative Retrieval as Multi-Vector Dense Retrieval</a> (Wu et al., 2024) </li>
+        </ul>
+        <br />
+      
+      </div>
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{liu2024robust,
+author = {Liu, Yu-An and Zhang, Ruqing and Guo, Jiafeng and de Rijke, Maarten},
+title = {Robust Information Retrieval},
+year = {2024},
+booktitle = {SIGIR},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/ACL2023-Retrieval-LM" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
