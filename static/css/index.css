@@ -156,26 +156,3 @@ body {
   border-radius: 5px;
 }
 
-
-.author-row {
-  display: flex;
-  justify-content: space-around; /* 每行显示3个元素，平均分布 */
-  margin-bottom: 20px; /* 每行之间的间距 */
-}
-
-.author-cell {
-  text-align: center;
-  padding: 10px;
-  width: 30%; /* 确保每行最多显示3个单元格 */
-}
-
-.author-cell img {
-  border-radius: 50%;
-  margin-bottom: 8px; /* 图片和名字之间的间距 */
-}
-
-.author-cell a {
-  display: block;
-  margin-top: 5px; /* 名字和上方图片之间的间距 */
-}
-
