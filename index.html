@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The SIGIR 2024 Tutorial: Robust Information Retrieval</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">
+              <span style="font-size: 80%">The SIGIR 2024 Tutorial:</span><br />
+              Robust Information Retrieval
+            </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <table>
+                <tr>
+                  <!-- <th scope="row">TR-7</th> -->
+                  <td width="16%" style="text-align: center; padding: 10px"><img width="150px" height="150px" src="static/imgs/profile_liuyuan.jpg"></td>
+                  <td width="16%" style="text-align: center; padding: 10px"><img width="150px" height="150px" src="static/imgs/profile_ruqing.jpg"></td>
+                  <td width="16%" style="text-align: center; padding: 10px"><img width="150px" height="150px" src="static/imgs/profile_jiafeng.jpg"></td>
+                  <td width="16%" style="text-align: center; padding: 10px"><img width="150px" height="150px" src="static/imgs/profile_mdr.jpg"></td>
+              </tr>
+                <tr>
+                  <!-- <th scope="row">TR-7</th> -->
+                  <td width="16%" style="text-align: center"><a href="https://davion-liu.github.io/" style="border-radius: 50%">Yu-An Liu</a><sup>1</sup>,</td>
+                  <td width="16%" style="text-align: center"><a href="https://daqingchong.github.io/" style="border-radius: 50%">Ruqing Zhang</a><sup>1</sup>,</td>
+                  <td width="16%" style="text-align: center"><a href="http://www.bigdatalab.ac.cn/gjf/" style="border-radius: 50%">Jiafeng Guo</a><sup>1</sup>,</td>
+                  <td width="16%" style="text-align: center"><a href="https://staff.fnwi.uva.nl/m.derijke/" style="border-radius: 50%">Maarten de Rijke</a><sup>2</sup></td>
+                </tr>
+            </table>
+            </span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>CAS Key Lab of Network Data Science and Technology, ICT, CAS, University of Chinese Academy of Sciences, </span>
+            <span class="author-block"><sup>2</sup>University of Amsterdam</span>
+          </div>
+          <br />
+          <div class="is-size-5 publication-authors">
+            <b>Sunday July 14th 1:30 PM - 5:00 PM (EDT) @ South American A </b>
+          </div>
+          <!-- <div class="is-size-5 publication-authors">
+            Zoom link available on <a href="https://underline.io/events/395/sessions?eventSessionId=15330&searchGroup=lecture" target="_blank">Underline</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">About this tutorial</h2>
+        <div class="content has-text-justified">
+          <p>
+            Beyond effectiveness, the robustness of an information retrieval (IR) system is increasingly attracting attention.
+            When deployed, a critical technology such as IR should not only deliver strong performance on average but also have the ability to handle a variety of exceptional situations.
+            In recent years, research into the robustness of IR has seen significant growth, with numerous researchers offering extensive analyses and proposing myriad strategies to address robustness challenges.
+          </p>
+          <p>
+            In this tutorial, we first provide background information covering the basics and a taxonomy of robustness in IR.
+            Then, we examine adversarial robustness and out-of-distribution (OOD) robustness within IR-specific contexts, extensively reviewing recent progress in methods to enhance robustness.
+            The tutorial concludes with a discussion on the robustness of IR in the context of large language models (LLMs), highlighting ongoing challenges and promising directions for future research.
+            This tutorial aims to generate broader attention to robustness issues in IR, facilitate an understanding of the relevant literature, and lower the barrier to entry for interested researchers and practitioners.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+
+
+
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Slides</h2>
+        Section 1: <a href="slides/Tutorial_Slides__Robust_Information_Retrieval__01-introduction.pdf" target='_blank'>Introduction</a>
+        <br />
+        Section 2: <a href="slides/Tutorial_Slides__Robust_Information_Retrieval__02-preliminaries.pdf" target='_blank'>Preliminaries</a>
+        <br />
+        Section 3: <a href="slides/Tutorial_Slides__Robust_Information_Retrieval__03-adversarial_robustness.pdf" target='_blank'>Adversarial robustness</a>
+        <br />
+        Section 4: <a href="slides/Tutorial_Slides__Robust_Information_Retrieval__04-OOD_robustness.pdf" target='_blank'>Out-of-distribution robustness</a>
+        <br />
+        Section 5: <a href="slides/Tutorial_Slides__Robust_Information_Retrieval__05-robust_IR_at_LLM.pdf" target='_blank'>Robust IR in the age of LLMs</a>
+        <br />
+        Section 6: <a href="slides/Tutorial_Slides__Robust_Information_Retrieval__06-conclusion.pdf" target='_blank'>Challenges and future directions</a>
+
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Schedule</h2>
+
+
+        <div class="content has-text-justified">
+
+          <style type="text/css">
+          .tg  {border-collapse:collapse;border-spacing:0;}
+          .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+          .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+          .tg .tg-0lax{text-align:left;vertical-align:top}
+          </style>
+          <table class="tg">
+          <thead>
+            <tr>
+              <th class="tg-0pky">Time</th>
+              <th class="tg-0lax">Section</th>
+              <th class="tg-0lax">Presenter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="tg-0lax">13:30 - 13:50</td>
+              <td class="tg-0lax">Section 1: Introduction</td>
+              <td class="tg-0lax">Maarten de Rijke</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">13:50 - 14:10</td>
+              <td class="tg-0lax">Section 2: Preliminaries</td>
+              <td class="tg-0lax">Yu-An Liu</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">14:10 - 15:00</td>
+              <td class="tg-0lax">Section 3: Adversarial robustness</td>
+              <td class="tg-0lax">Yu-An Liu</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">15:00 - 15:30</td>
+              <td class="tg-0lax">30min coffee break</td>
+              <td class="tg-0lax"></td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">15:30 - 16:20</td>
+              <td class="tg-0lax">Section 4: Out-of-distribution robustness</td>
+              <td class="tg-0lax">Yu-An Liu</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">16:20 - 16:30</td>
+              <td class="tg-0lax">Section 5: Robust IR in the age of LLMs</td>
+              <td class="tg-0lax">Yu-An Liu</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">16:30 - 16:50</td>
+              <td class="tg-0lax">Section 6: Challenges and future directions</td>
+              <td class="tg-0lax">Maarten de Rijke</td>
+            </tr>
+            <tr>
+              <td class="tg-0lax">16:50 - 17:00</td>
+              <td class="tg-0lax">Q & A</td>
+              <td class="tg-0lax">All</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Concurrent Work. -->
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Survey</h2>
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2407.06992"><b>Robust Neural Information Retrieval: An Adversarial and Out-of-distribution Perspective</b></a> (liu et al., 2024) </li>
+        </ul>
+        <br />
+      </div>
+    </div>
+
+    <h2 class="title is-3">Benchmark</h2>
+        <ul>
+          <li><a href="https://github.com/Davion-Liu/BestIR">BestIR: Benchmark of robust information retrieval</a> (Liu et al. 2024, BestIR) </li>
+          <li><a href="https://arxiv.org/abs/2104.08663">Beir: A heterogenous benchmark for zero-shot evaluation of information retrieval models</a> (Thakur et al. 2021, BEIR) </li>
+        </ul>
+        <br />
+    
+        <h3 class="title is-3">Perspective Papers</h3>
+        <ul>
+          <li><a href="https://www.emerald.com/insight/content/doi/10.1108/eb026647/full/html?skipTracking=true">The probability ranking principle in IR</a> (Robertson et al. 1977, Probability ranking principle) </li>
+          <li><a href="https://www.jair.org/index.php/jair/article/download/11104/26296">A Game Theoretic Analysis of the Adversarial Retrieval Setting</a> (Basat et al. 2017, PRP is sub-optimal) </li>
+          <li><a href="https://dl.acm.org/doi/pdf/10.1145/3477495.3532771">Competitive Search</a> (Kurland et al. 2022, SIGIR, Competitive search) </li>
+          <li><a href="https://openreview.net/forum?id=fqMkcHumZy#discussion">Ranking-Incentivized Document Manipulations for Multiple Queries</a> (Nachimovsky et al. 2024, ICTIR, Topic-oriented competitive search) </li>
+        </ul>
+        <br />
+
+
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reading List</h2>
+
+        <p>A curated list of papers related to robustness in IR can be found at <a href="https://github.com/Davion-Liu/Awesome-Robustness-in-Information-Retrieval"><b>Awesome Robustness in Information Retrieval</b></a>.</p>
+        <p>The tutorial extensively covers papers highlighted in <b>bold</b>.</p>
+        <br />
+
+        <h3 class="title is-5">Section 3: Adversarial robustness</h3>
+        <h4 class="title is-5">3.1 Adversarial attacks</h4>
+
+        <h5 class="title is-5">3.1.0 Classification of adversarial attack tasks</h5>
+        <p><b>Adversarial retrieval attack</b></pp>
+        <ul>
+          <li><a href="https://dl.acm.org/doi/pdf/10.1145/3583780.3614793"><b>Black-box Adversarial Attacks against Dense Retrieval Models: A Multi-view Contrastive Learning Method</b></a> (Liu et.al. 2023, black-box, dense retrieval attack) </li>
+          <li><a href="https://arxiv.org/pdf/2005.12989">Ranking-Incentivized Quality Preserving Content Modification</a> (Gregory et.al. 2020) </li>
+          <li><a href="https://arxiv.org/pdf/2304.14031.pdf">Boosting Big Brother: Attacking Search Engines with Encodings</a> (Boucher et.al. 2023, encoding attack) </li>
+          <li><a href="https://arxiv.org/pdf/2304.11300.pdf">MAWSEO: Adversarial Wiki Search Poisoning for Illicit Online Promotion</a> (Lin et.al. 2024, adversarial revisions) </li>
+          <li><a href="https://arxiv.org/pdf/2402.13532.pdf">Backdoor Attacks on Dense Passage Retrievers for Disseminating Misinformation</a> (Long et.al. 2024, backdoor attack) </li>
+          <li><a href="https://arxiv.org/pdf/2403.07654.pdf">Analyzing Adversarial Attacks on Sequence-to-Sequence Relevance Models</a> (Parry et.al. 2024, attacking T5) </li>
+        </ul>
+
+        <br />
+        <p><b>Adversarial ranking attack</b></pp>
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2204.01321"><b>PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models</b></a> (Wu et.al. 2022, black-box, word substitution) </li>
+          <li><a href="https://arxiv.org/pdf/2209.06506.pdf"><b>Order-Disorder: Imitation Adversarial Attacks for Black-box Neural Ranking Models</b></a> (Liu et.al. 2022, black-box, trigger) </li>
+          <li><a href="https://arxiv.org/pdf/2008.02197">One word at a time: adversarial attacks on retrieval models</a> (Raval and Verma 2020, white-box) </li>
+          <li><a href="https://arxiv.org/pdf/2011.04743">Adversarial Semantic Collisions</a> (Song et.al. 2020, white-box) </li>
+          <li><a href="https://arxiv.org/pdf/2206.11724">Bert rankers are brittle: A study using adversarial document perturbations</a> (Wang et.al. 2022, white-box) </li>
+          <li><a href="https://aclanthology.org/2022.repl4nlp-1.20.pdf">TRAttack: Text Rewriting Attack Against Text Retrieval</a> (Song et.al. 2022, rewriting attack, matching model) </li>
+          <li><a href="https://arxiv.org/pdf/2305.01860.pdf">Towards Imperceptible Document Manipulations against Neural Ranking Models</a> (Chen et.al. 2023, black-box, prompt) </li>
+          <li><a href="https://arxiv.org/pdf/2404.01574.pdf">Multi-granular Adversarial Attacks against Black-box Neural Ranking Models</a> (Liu et.al. 2024, multi-granular attack) </li>
+        </ul>
+
+
+        <br />
+        <p><b>Topic-oriented adversarial retrieval/ranking attack</b></pp>
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2304.14867.pdf"><b>Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models</b></a> (Liu et.al. 2023, black-box, TARA task) </li>
+          <li><a href="https://arxiv.org/pdf/2402.13532.pdf">Poisoning Retrieval Corpora by Injecting Adversarial Passages</a> (Zhong et.al. 2023, dense retrieval attack) </li>
+        </ul>
+        <br />
+
+        <h5 class="title is-5">3.1.1 Steal knowledge from black-box models</h5>
+
+        <p><b>Surrogate model training</b></pp>
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2204.01321"><b>PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models</b></a> (Wu et.al. 2022) </li>
+          <li><a href="https://arxiv.org/pdf/2209.06506.pdf">Order-Disorder: Imitation Adversarial Attacks for Black-box Neural Ranking Models</a> (Liu et.al. 2022) </li>
+        </ul>
+        <br />
+
+        <h5 class="title is-5">3.1.2 Identify vulnerable positions in documents</h5>
+
+        <p><b>Pre-defined position</b></pp>
+          <ul>
+            <li><a href="https://arxiv.org/pdf/2209.06506.pdf"><b>Order-Disorder: Imitation Adversarial Attacks for Black-box Neural Ranking Models</b></a> (Liu et.al. 2022) </li>
+            <li><a href="https://arxiv.org/pdf/2204.01321">Adversarial Semantic Collisions</a> (Wu et.al. 2022) </li>
+            <li><a href="https://arxiv.org/pdf/2206.11724">Bert rankers are brittle: A study using adversarial document perturbations</a> (Wang et.al. 2022, white-box) </li>
+            <li><a href="https://arxiv.org/pdf/2304.14867.pdf">Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models</a> (Liu et.al. 2023, black-box, TARA task) </li>
+            <li><a href="https://arxiv.org/pdf/2403.07654.pdf">Analyzing Adversarial Attacks on Sequence-to-Sequence Relevance Models</a> (Parry et.al. 2024, attacking T5) </li>
+         </ul>
+         <br />
+         <p><b>Output-guided position</b></pp>
+          <ul>
+            <li><a href="https://arxiv.org/pdf/2305.01860.pdf"><b>Towards Imperceptible Document Manipulations against Neural Ranking Models</b></a> (Chen et.al. 2023, black-box, prompt) </li>
+            <li><a href="https://arxiv.org/pdf/2008.02197">One word at a time: adversarial attacks on retrieval models</a> (Raval and Verma 2020, white-box) </li>
+            <li><a href="https://aclanthology.org/2022.repl4nlp-1.20.pdf">TRAttack: Text Rewriting Attack Against Text Retrieval</a> (Song et.al. 2022, rewriting attack, matching model) </li>
+            <li><a href="https://arxiv.org/pdf/2402.13532.pdf">Backdoor Attacks on Dense Passage Retrievers for Disseminating Misinformation</a> (Long et.al. 2024, backdoor attack) </li>
+          </ul>
+          <br />
+          <p><b>Gradient-guided position</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2204.01321"><b>PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models</b></a> (Wu et.al. 2022) </li>
+              <li><a href="https://arxiv.org/pdf/2304.14867.pdf">Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models</a> (Liu et.al. 2023, black-box, TARA task) </li>
+              <li><a href="https://dl.acm.org/doi/pdf/10.1145/3583780.3614793">Black-box Adversarial Attacks against Dense Retrieval Models: A Multi-view Contrastive Learning Method</a> (Liu et.al. 2023, black-box, dense retrieval attack) </li>
+              <li><a href="https://arxiv.org/pdf/2402.13532.pdf">Poisoning Retrieval Corpora by Injecting Adversarial Passages</a> (Zhong et.al. 2023, dense retrieval attack) </li>
+              <li><a href="https://arxiv.org/pdf/2404.01574.pdf">Multi-granular Adversarial Attacks against Black-box Neural Ranking Models</a> (Liu et.al. 2024, multi-granular attack) </li>
+            </ul>
+
+        <br />
+        <h5 class="title is-5">3.1.3 Add Perturbation to identified positions</h5>
+        <h6 class="title is-5">3.1.3.1 Perturbation type</h6>
+        <p><b>Word substitution</b></pp>
+          <ul>
+            <li><a href="https://dl.acm.org/doi/pdf/10.1145/3583780.3614793"><b>Black-box Adversarial Attacks against Dense Retrieval Models: A Multi-view Contrastive Learning Method</b></a> (Liu et.al. 2023, black-box, dense retrieval attack) </li>
+            <li><a href="https://arxiv.org/pdf/2204.01321">PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models</a> (Wu et.al. 2022, black-box, word substitution) </li>
+            <li><a href="https://arxiv.org/pdf/2404.01574.pdf">Multi-granular Adversarial Attacks against Black-box Neural Ranking Models</a> (Liu et.al. 2024, multi-granular attack) </li>
+            <li><a href="https://arxiv.org/pdf/2008.02197">One word at a time: adversarial attacks on retrieval models</a> (Raval and Verma 2020, white-box) </li>
+            <li><a href="https://arxiv.org/pdf/2402.13532.pdf">Poisoning Retrieval Corpora by Injecting Adversarial Passages</a> (Zhong et.al. 2023, dense retrieval attack) </li>
+          </ul>
+          <br />
+          <p><b>Trigger sentence</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2209.06506.pdf"><b>Order-Disorder: Imitation Adversarial Attacks for Black-box Neural Ranking Models</b></a> (Liu et.al. 2022, black-box, trigger) </li>
+              <li><a href="https://arxiv.org/pdf/2011.04743">Adversarial Semantic Collisions</a> (Song et.al. 2020, white-box) </li>
+              <li><a href="https://arxiv.org/pdf/2206.11724">Bert rankers are brittle: A study using adversarial document perturbations</a> (Wang et.al. 2022, white-box) </li>
+              <li><a href="https://arxiv.org/pdf/2403.07654.pdf">Analyzing Adversarial Attacks on Sequence-to-Sequence Relevance Models</a> (Parry et.al. 2024, attacking T5) </li>
+             </ul>
+          <br />
+          <p><b>Multi-granular</b></pp>
+          <ul>
+            <li><a href="https://arxiv.org/pdf/2404.01574.pdf"><b>Multi-granular Adversarial Attacks against Black-box Neural Ranking Models</b></a> (Liu et.al. 2024, multi-granular attack) </li>
+            <li><a href="https://arxiv.org/pdf/2304.14867.pdf">Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models</a> (Liu et.al. 2023, black-box, TARA task) </li>
+            </ul>
+            <br />
+          <p><b>Encoding error</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2304.14031.pdf"><b>Boosting Big Brother: Attacking Search Engines with Encodings</b></a> (Boucher et.al. 2023, encoding attack) </li>
+            </ul>
+        <br />
+          <p><b>Grammatical error</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2402.13532.pdf"><b>Backdoor Attacks on Dense Passage Retrievers for Disseminating Misinformation</b></a> (Long et.al. 2024, backdoor attack) </li>
+            </ul>
+        <br />
+        <h6 class="title is-5">3.1.3.2 Perturb strategy</h6>
+                <p><b>Static: greedy search</b></pp>
+          <ul>
+            <li><a href="https://arxiv.org/pdf/2402.13532.pdf"><b>Poisoning Retrieval Corpora by Injecting Adversarial Passages</b></a> (Zhong et.al. 2023, dense retrieval attack) </li>
+            <li><a href="https://arxiv.org/pdf/2011.04743">Adversarial Semantic Collisions</a> (Song et.al. 2020, white-box) </li>
+            <li><a href="https://arxiv.org/pdf/2204.01321">PRADA: Practical Black-Box Adversarial Attacks against Neural Ranking Models</a> (Wu et.al. 2022, black-box, word substitution) </li>
+            <li><a href="https://arxiv.org/pdf/2209.06506.pdf">Order-Disorder: Imitation Adversarial Attacks for Black-box Neural Ranking Models</a> (Liu et.al. 2022, black-box, trigger) </li>
+            <li><a href="https://dl.acm.org/doi/pdf/10.1145/3583780.3614793">Black-box Adversarial Attacks against Dense Retrieval Models: A Multi-view Contrastive Learning Method</a> (Liu et.al. 2023, black-box, dense retrieval attack) </li>
+          </ul>
+          <br />
+          <p><b>Dynamic: reinforcement learning</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2304.14867.pdf"><b>Topic-oriented Adversarial Attacks against Black-box Neural Ranking Models</b></a> (Liu et.al. 2023, black-box, TARA task) </li>
+              <li><a href="https://arxiv.org/pdf/2404.01574.pdf">Multi-granular Adversarial Attacks against Black-box Neural Ranking Models</a> (Liu et.al. 2024, multi-granular attack) </li>
+             </ul>
+          <br />
+
+          <h4 class="title is-5">3.2 Adversarial defenses</h4>
+  
+          <h5 class="title is-5">3.2.1 Empirical  defense</h5>
+  
+          <p><b>Data augmentation</b></pp>
+          <ul>
+            <li><a href="https://www.sciencedirect.com/science/article/pii/S0306457322002369"><b>Dealing with textual noise for robust and effective BERT re-ranking</b></a> (Chen et al. 2023) </li>
+          </ul>
+
+          <br />
+          <p><b>Traditional adversarial training</b></pp>
+          <ul>
+            <li><a href="https://arxiv.org/pdf/2301.10576"><b>A Study on FGSM Adversarial Training for Neural Retrieval</b></a> (Lupart and Clinchant 2023) </li>
+            <li><a href="https://arxiv.org/pdf/1705.10513">IRGAN: A Minimax Game for Unifying Generative and Discriminative Information Retrieval Models</a> (Wang et al. 2017, IRGAN) </li>
+            <li><a href="https://arxiv.org/pdf/1811.04155">Adversarial Sampling and Training for Semi-Supervised Information Retrieval</a> (Park and Chang 2019, AdvIR) </li>
+            <li><a href="https://arxiv.org/pdf/2110.03611">Adversarial Retriever-Ranker for dense text retrieval</a> (Zhang et al. 2022, AR2) </li>
+            <li><a href="https://arxiv.org/pdf/2206.08063.pdf">Towards Robust Ranker for Text Retrieval</a> (Yucheng et al. 2022, R2ANKER) </li>
+          </ul>
+
+          <br />
+          <p><b>Theory-guided adversarial training</b></pp>
+          <ul>
+            <li><a href="https://ojs.aaai.org/index.php/AAAI/article/view/28730/29409"><b>Perturbation-Invariant Adversarial Training for Neural Ranking Models: Improving the Effectiveness-Robustness Trade-Off</b></a> (Liu et.al. 2024, Perturbation-invariance theory) </li>
+          </ul>
+        <br />
+  
+          <h5 class="title is-5">3.2.2 Certified defense</h5>
+  
+          <br />
+          <p><b>Certified robustness</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2209.06691.pdf"><b>Certified Robustness to Word Substitution Ranking Attack for Neural Ranking Models</b></a> (Wu et.al. 2022, Certified Top-K robustness) </li>
+           </ul>
+  
+          <br />
+          <h5 class="title is-5">3.2.3  Attack detection</h5>
+          <p><b>Perplexity-based detection</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2204.01321"><b>Adversarial Semantic Collisions</b></a> (Wu et.al. 2022) </li>
+            </ul>
+            <br />
+            <p><b>Language-based detection</b></pp>
+              <ul>
+                <li><a href="https://arxiv.org/pdf/2209.06506.pdf"><b>Order-Disorder: Imitation Adversarial Attacks for Black-box Neural Ranking Models</b></a> (Liu et.al. 2022) </li>
+               </ul>
+            <br />
+            <p><b>Learning-based detection</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2307.16816.pdf"><b>Defense of Adversarial Ranking Attack in Text Retrieval: Benchmark and Baseline via Detection</b></a> (Chen et.al. 2023) </li>
+              </ul>
+          <br />
+
+
+          <h3 class="title is-5">Section 4: Out-of-distribution robustness</h3>
+          <h4 class="title is-5">4.1 OOD generalizability on unforeseen documents</h4>
+  
+          <h5 class="title is-5">4.1.1 Adaptation to new corpus</h5>
+  
+          <p><b>Data augmentation</b></pp>
+          <ul>
+            <li><a href="https://arxiv.org/abs/2112.07577"><b>GPL: Generative pseudo labeling for unsupervised domain adaptation of dense retrieval</b></a> (Wang et al. 2022, GPL) </li>
+            <li><a href="https://arxiv.org/abs/2112.09118"><b>Unsupervised dense information retrieval with contrastive learning</b></a> (Izacard et al. 2021, Contriever) </li>
+            <li><a href="https://arxiv.org/pdf/2202.05144.pdf"><b>InPars: Data Augmentation for Information Retrieval using Large Language Models</b></a> (Bonifacio et al. 2022, InPars) </li>
+            <li><a href="https://dl.acm.org/doi/abs/10.1145/3634911">Data augmentation for sample efficient and robust document ranking</a> (Anand et al. 2023) </li>
+            <li><a href="https://ieeexplore.ieee.org/abstract/document/9720964/">Data augmentation and transfer learning for brain tumor detection in magnetic resonance imaging</a> (Anaya-Isaza et al. 2022) </li>
+            <li><a href="https://openreview.net/pdf?id=kUf4BcWXGJr">HypeR: Multitask Hyper-Prompted Training Enables Large-Scale Retrieval Generalization</a> (Cai et al. 2023) </li>
+            <li><a href="https://arxiv.org/abs/2404.02489">DUQGen: Effective Unsupervised Domain Adaptation of Neural Rankers by Diversifying Synthetic Query Generation</a> (Chandradevan et al. 2024) </li>
+            <li><a href="https://arxiv.org/abs/2305.03953">Cross-domain augmentation networks for click-through rate prediction</a> (Chen et al. 2023, CDAnet) </li>
+            <li><a href="https://arxiv.org/abs/2209.11755">Promptagator: Few-shot dense retrieval from 8 examples</a> (Dai et al. 2022, PROMPTAGATOR) </li>
+            <li><a href="https://arxiv.org/abs/2302.03754">Augmenting zero-shot dense retrievers with plug-in mixture-of-memories</a> (Ge et al. 2023, MoMA) </li>
+            <li><a href="https://arxiv.org/abs/2401.06910">InRanker: Distilled Rankers for Zero-shot Information Retrieval</a> (Laitz et al. 2024, InRanker) </li>
+            <li><a href="https://arxiv.org/abs/2403.08970">Domain Adaptation for Dense Retrieval and Conversational Dense Retrieval through Self-Supervision by Meticulous Pseudo-Relevance Labeling</a> (Li and Gaussier 2024, DoDress) </li>
+            <li><a href="https://arxiv.org/abs/2009.10270">Embedding-based zero-shot retrieval through query generation</a> (Liang et al. 2020) </li>
+            <li><a href="https://arxiv.org/abs/2109.01156">Challenges in generalization in open domain question answering</a> (Liu et al. 2022) </li>
+            <li><a href="https://arxiv.org/abs/2004.14503">Zero-shot neural passage retrieval via domain-targeted synthetic question generation</a> (Ma et al. 2021) </li>
+            <li><a href="https://arxiv.org/abs/2201.10005">Text and code embeddings by contrastive pre-training</a> (Neelakantan et al. 2022) </li>
+            <li><a href="https://arxiv.org/abs/2307.16833">Data augmentation for neural machine translation using generative language model</a> (Oh et al. 2023) </li>
+            <li><a href="https://arxiv.org/abs/2112.07708">Learning to retrieve passages without supervision</a> (Ram et al. 2022, Spider) </li>
+            <li><a href="https://arxiv.org/abs/2104.07800">Towards robust neural retrieval models with synthetic pre-training</a> (Reddy et al. 2021) </li>
+            <li><a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00564/116466">Questions are all you need to train a dense passage retriever</a> (Sachan et al.) </li>
+          </ul>
+  
+          <br />
+          <p><b>Domain modeling</b></pp>
+          <ul>
+            <li><a href="https://arxiv.org/abs/2210.15212"><b>COCO-DR: Combating distribution shifts in zero-shot dense retrieval with contrastive and distributionally robust learning</b></a> (Yu et al. 2022, COCO-DR) </li>
+            <li><a href="https://dl.acm.org/doi/abs/10.1145/3589334.3645512">Improving Retrieval in Theme-specific Applications using a Corpus Topical Taxonomy</a> (Kang et al. 2024, ToTER) </li>
+            <li><a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/cc473bb3ec4176a5e640c3a6b5fb5239-Abstract-Conference.html">Learning list-level domain-invariant representations for ranking</a> (Xian et al. 2023) </li>
+            <li><a href="https://arxiv.org/abs/2110.07581">Zero-shot dense retrieval with momentum adversarial domain invariant representations</a> (Xin et al. 2022, MoDIR) </li>
+            <li><a href="https://arxiv.org/abs/2305.11052">BERM: Training the balanced and extractable representation for matching to improve generalization ability of dense retrieval</a> (Xu et al. 2023, BERM) </li>
+            <li><a href="https://arxiv.org/abs/2208.05753">Disentangled modeling of domain and relevance for adaptable dense retrieval</a> (Zhan et al., DDR) </li>
+          </ul>
+  
+          <br />
+          <p><b>Architectural modifications</b></pp>
+          <ul>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-56060-6_8"><b>DESIRE-ME: Domain-Enhanced Supervised Information Retrieval Using Mixture-of-Experts</b></a> (Kasela et al. 2024, DESIRE-ME) </li>
+            <li><a href="https://link.springer.com/chapter/10.1007/978-3-030-99736-6_7">Out-of-domain semantics to the rescue! zero-shot hybrid retrieval models</a> (Tao Chen et al. 2022) </li>
+            <li><a href="https://dl.acm.org/doi/abs/10.1145/3477495.3531857">From distillation to hard negative sampling: Making sparse neural ir models more effective</a> (Formal et al. 2022) </li>
+            <li><a href="https://arxiv.org/abs/2209.15469">Zero-shot retrieval with search agents and hybrid environments</a> (Huebscher et al. 2022) </li>
+            <li><a href="https://arxiv.org/abs/2311.09765">Back to Basics: A Simple Recipe for Improving Out-of-Domain Retrieval in Dense Encoders</a> (Lee et al. 2023) </li>
+          </ul>
+
+          <br />
+          <p><b>Scaling up the model capacity</b></pp>
+          <ul>
+            <li><a href="https://arxiv.org/abs/2112.07899"><b>Large dual encoders are generalizable retrievers</b></a> (Ni et al. 2022) </li>
+            <li><a href="https://arxiv.org/abs/2205.09153">Ernie-search: Bridging cross-encoder with dual-encoder via self on-the-fly distillation for dense passage retrieval</a> (Lu et al. 2022) </li>
+          </ul>
+        <br />
+  
+          <h5 class="title is-5">4.1.2 Updates to a corpus</h5>
+  
+          <p><b>Continual learning for dense retrieval</b></pp>
+          <ul>
+            <li><a href="https://dl.acm.org/doi/abs/10.1145/3583780.3614947"><b>L2R: Lifelong Learning for First-stage Retrieval with Backward-Compatible Representations</b></a> (Cai et al. 2023, L$^2$R) </li>
+          </ul>
+
+          <br />
+          <p><b>Continual learning for generative retrieval</b></pp>
+          <ul>
+            <li><a href="https://dl.acm.org/doi/abs/10.1145/3583780.3614821"><b>Continual learning for generative retrieval over dynamic corpora</b></a> (Chen et al. 2023, CLEVER) </li>
+            <li><a href="https://arxiv.org/abs/2402.16767">Corpusbrain++: A continual generative pre-training framework for knowledge-intensive language tasks</a> (Guo et al. 2024, CorpusBrain++) </li>
+            <li><a href="https://proceedings.mlr.press/v202/kishore23a.html">Incdsi: incrementally updatable document retrieval</a> (Kishore et al. 2023, IncDSI) </li>
+            <li><a href="https://arxiv.org/abs/2212.09744">DSI++: Updating transformer memory with new documents</a> (Mehta et al. 2023, DSI++) </li>
+            <li><a href="https://www.researchgate.net/publication/371163230_Continually_Updating_Generative_Retrieval_on_Dynamic_Corpora/fulltext/6476b927a25e543829dfebb1/Continually-Updating-Generative-Retrieval-on-Dynamic-Corpora.pdf?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19">Continually Updating Generative Retrieval on Dynamic Corpora</a> (Yoon et al. 2023) </li>
+          </ul>
+          <br />
+  
+            <h4 class="title is-5">4.2 OOD generalizability on unforeseen queries</h4>
+    
+            <h5 class="title is-5">4.2.1 Query variation</h5>
+            <p><b>Self-teaching</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2204.00716"><b>CharacterBERT and Self-Teaching for Improving the Robustness of Dense Retrievers on Queries with Typos</b></a> (Zhuang et al. 2022, CBST) </li>
+              <li><a href="https://arxiv.org/abs/2105.12932">Contrastive fine-tuning improves robustness for neural rankers</a> (Ma et al. 2021) </li>
+              <li><a href="https://www.ijcai.org/proceedings/2022/0275.pdf">Towards Robust Dense Retrieval via Local Ranking Alignment</a> (Chen et al. 2022, RoDR) </li>
+              <li><a href="https://arxiv.org/pdf/2304.08138">Typos-aware bottlenecked pre-training for robust dense retrieval</a> (Zhuang et al. 2023, ToRoDer) </li>
+            </ul>
+  
+            <br />
+            <p><b>Contrastive learning</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2205.02303"><b>Analysing the Robustness of Dual Encoders for Dense Retrieval Against Misspellings</b></a> (Sidiropoulos et al. 2022, DRCL) </li>
+              <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-39847-6_31">MIRS: [MASK] Insertion Based Retrieval Stabilizer for Query Variations</a> (Liu et al. 2023, MIRS) </li>
+              <li><a href="https://arxiv.org/abs/2105.12932">Contrastive fine-tuning improves robustness for neural rankers</a> (Ma et al. 2021) </li>
+              <li><a href="https://arxiv.org/pdf/2108.12139">Dealing with Typos for BERT-based Passage Retrieval and Ranking</a> (Zhuang et al. 2021, DRTA) </li>
+            </ul>
+  
+            <br />
+            <p><b>Hybrid training</b></pp>
+            <ul>
+              <li><a href="https://arxiv.org/abs/2306.10348"><b>Typo-robust representation learning for dense retrieval</b></a> (Tasawong et al. 2023, DST) </li>
+              <li><a href="https://www.mdpi.com/2076-3417/13/18/10148">Towards Robust Neural Rankers with Large Language Model: A Contrastive Training Approach</a> (Pan et al. 2023) </li>
+              <li><a href="https://arxiv.org/abs/2304.03401">Noise-robust dense retrieval via contrastive alignment post training</a> (Campos et al. 2023, CAPOT) </li>
+              <li><a href="https://arxiv.org/pdf/2403.10939">Improving the Robustness of Dense Retrievers Against Typos via Multi-Positive Contrastive Learning</a> (Sidiropoulos et al. 2024) </li>
+            </ul>
+         <br />
+    
+            <h5 class="title is-5">4.2.2  Unseen query type</h5>
+              <ul>
+                <li><a href="https://arxiv.org/pdf/2108.05018.pdf"><b>Are Neural Ranking Models Robust?</b></a> (Wu et al. 2022) </li>
+                <li><a href="https://dl.acm.org/doi/abs/10.1145/3209978.3210141"><b>Cross domain regularization for neural ranking models using adversarial learning</b></a> (Cohen et al. 2018) </li>
+                <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-56066-8_5">Learning to Jointly Transform and Rank Difficult Queries</a> (Bigdeli et al. 2024) </li>
+                <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-28244-7_40">Ms-shift: An analysis of ms marco distribution shifts on neural retrieval</a> (Lupart et al. 2023, MS-Shift) </li>
+                <li><a href="https://arxiv.org/abs/2105.12932">Contrastive fine-tuning improves robustness for neural rankers</a> (Ma et al. 2021) </li>
+                <li><a href="https://arxiv.org/abs/2109.08535">Simple entity-centric questions challenge dense retrievers</a> (Sciavolino et al. 2021) </li>
+             </ul>
+            <br />
+
+      </div>
+    </div>
+
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{liu2024robust,
+author = {Liu, Yu-An and Zhang, Ruqing and Guo, Jiafeng and de Rijke, Maarten},
+title = {Robust Information Retrieval},
+year = {2024},
+booktitle = {SIGIR},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/ACL2023-Retrieval-LM" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
